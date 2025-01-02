@@ -10,10 +10,12 @@ public class BallController : MonoBehaviour
     private float launchDelay = 1.0f;
     private Vector2 startPos;
     private Rigidbody2D rb;
+    private TrailRenderer tr;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        tr = GetComponentInChildren<TrailRenderer>();
         startPos = transform.position;
         Launch();
     }
@@ -38,8 +40,11 @@ public class BallController : MonoBehaviour
 
     public void ResetPosition()
     {
+        tr.emitting = false;
         rb.velocity = Vector2.zero;
         transform.position = startPos;
+        tr.Clear();
+        tr.emitting = true;
         Launch();
     }
 }
