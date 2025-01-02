@@ -315,9 +315,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6676795727185491337, guid: edf7568d17863484395979309d1a7486, type: 3}
-      propertyPath: isPlayer1
-      value: 0
+    - target: {fileID: 2778379378568828939, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 2127046253}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: reactionDelay
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: maxPredictionError
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 6676795727185491340, guid: edf7568d17863484395979309d1a7486, type: 3}
       propertyPath: m_Name
@@ -367,7 +383,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: edf7568d17863484395979309d1a7486, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -835,6 +852,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1189961034090622428, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: isPlayer1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189961034090622428, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778379378568828939, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 2127046253}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: reactionDelay
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171511370630539551, guid: edf7568d17863484395979309d1a7486, type: 3}
+      propertyPath: maxPredictionError
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 6676795727185491340, guid: edf7568d17863484395979309d1a7486, type: 3}
       propertyPath: m_Name
       value: PlayerLeft
@@ -883,5 +928,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: edf7568d17863484395979309d1a7486, type: 3}

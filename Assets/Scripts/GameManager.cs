@@ -22,14 +22,14 @@ public class GameManager : MonoBehaviour
 
     private int player1Score;
     private int player2Score;
-    private PlayerController player1Controller;
-    private PlayerController player2Controller;
+    private PaddleComponent player1PaddleComponent;
+    private PaddleComponent player2PaddleComponent;
     private BallController ballController;
 
     void Start()
     {
-        player1Controller = player1Paddle.GetComponent<PlayerController>();
-        player2Controller = player2Paddle.GetComponent<PlayerController>();
+        player1PaddleComponent = player1Paddle.GetComponent<PaddleComponent>();
+        player2PaddleComponent = player2Paddle.GetComponent<PaddleComponent>();
         ballController = ball.GetComponent<BallController>();
         
         GoalTrigger player1GoalTrigger = player1Goal.GetComponent<GoalTrigger>();
@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour
 
     void ResetRound()
     {
-        player1Controller.ResetPosition();
-        player2Controller.ResetPosition();
+        player1PaddleComponent.ResetPosition();
+        player2PaddleComponent.ResetPosition();
         ballController.ResetPosition();
         UpdateScoreUI();
     }
