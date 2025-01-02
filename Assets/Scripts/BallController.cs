@@ -6,6 +6,8 @@ public class BallController : MonoBehaviour
 {
     [SerializeField]
     private float speed = 7.0f;
+    [SerializeField]
+    private float launchDelay = 1.0f;
     private Vector2 startPos;
     private Rigidbody2D rb;
 
@@ -23,6 +25,12 @@ public class BallController : MonoBehaviour
 
     public void Launch()
     {
+        StartCoroutine(LaunchAfterDelay());
+    }
+
+    private IEnumerator LaunchAfterDelay()
+    {
+        yield return new WaitForSeconds(launchDelay);
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
